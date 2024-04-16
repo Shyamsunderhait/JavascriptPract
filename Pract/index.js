@@ -106,3 +106,37 @@ function checkPrime(num) {
 }
 
 checkPrime(4)
+
+// fibonacci 
+
+function fibonacci(num) {
+    let num1 = 0
+    let num2 = 1
+    let sum;
+    let i = 0
+    for (let i = 0; i < num; i++) {
+        sum = num1 + num2
+        num1 = num2
+        num2 = sum
+    }
+    return num2
+}
+
+console.log(fibonacci(5));
+
+//convert a string to title case (capitalize the first letter of each word). 
+
+const sent = "my name is shyamsunder hait";
+const words = sent.split(" ");
+//console.log(words);
+
+for (let i = 0; i < words.length; i++) {
+   words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    
+}
+words.join(" ")
+console.log(words.join(" "));
+
+
+
+
