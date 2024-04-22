@@ -13,17 +13,30 @@ modifyArray(arr,function() {
 
 //give a string reverse each word in the sentence
 
-var string = "welcome to this javascript guide";
+// var string = "welcome to this javascript guide";
 
-var reverseEntireSenctence = revBysep(string, "");
+// var reverseEntireSenctence = revBysep(string, "");
 
-var reverseEachWord = revBysep(reverseEntireSenctence, " ")
+// var reverseEachWord = revBysep(reverseEntireSenctence, " ")
 
-function revBysep(string, separator) {
-    return string.split(separator).reverse().join(separator);
+// function revBysep(string, separator) {
+//     return string.split(separator).reverse().join(separator);
+// }
+
+// console.log(reverseEachWord);
+
+var string = "hi iam shyamsunder hait"
+var revEntSen = revBysep(string, '');
+var revEchWord = revBysep(revEntSen, " ");
+
+function revBysep(string , seperator){
+    return string.split(seperator).reverse().join(seperator)
 }
 
-console.log(reverseEachWord);
+console.log(revEchWord);
+
+
+
 
 //how to check if an object is an array
 
@@ -111,3 +124,31 @@ console.log(addSix(22));
  }
 
 console.log( isAna(fi,se));
+
+function simplfunc(){
+    var x = 10;
+    x++
+    return x
+}
+
+function closFunc(){
+    var x = 10;
+    function inc() {
+      return  x++ 
+    }
+    return{
+        inc
+    }
+}
+
+console.log(simplfunc());
+console.log(simplfunc());
+console.log(simplfunc());
+
+console.log(closFunc());
+
+var ref = closFunc();
+console.log(ref.inc());
+console.log(ref.inc());
+console.log(ref.inc());
+console.log(ref.inc());
