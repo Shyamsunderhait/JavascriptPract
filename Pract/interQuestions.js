@@ -107,7 +107,7 @@ function createBase(baseNum) {
 
 var addSix = createBase(12);
 console.log(addSix(22));
-
+ 
 // ---------------- Anagram ------------
  var fi = 'Mary';
  var se = 'Army';
