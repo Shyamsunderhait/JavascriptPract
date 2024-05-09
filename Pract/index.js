@@ -138,5 +138,65 @@ words.join(" ")
 console.log(words.join(" "));
 
 
+// Write a function to find longest word in a string
+
+
+let findLongestWord = (str)=>{
+    if(str.trim().length === 0){
+        return false;
+    }
+    word = str.split(" ")
+    //console.log(word);
+    // word = word.sort((a,b)=> a.length - b.length)
+    // return console.log(word.at(-1));
+
+    //or
+    return word.reduce((accum,crntWord)=> crntWord.length > accum.length ? crntWord : accum,"")
+}
+
+console.log(findLongestWord("hey watshapp shyam longestwordinsentence"));
+
+
+//make first word of each sentence to uppercase
+
+let toUpCase = (str)=>{
+    if(str.length > 280 || str.length === 0){
+        return false;
+    }
+
+    str = str.split(" ");
+    str = str.map((crntVal)=>  crntVal.replace(crntVal[0],crntVal[0].toUpperCase()))
+    str = str.join(" ");
+    return str
+
+
+}
+
+console.log(toUpCase('hey whatsapp what you doing where you gonna be tommorow'));
+
+
+//count number of character repetition or frequency of a character in a string
+//function should handle both lower and uppercase character
+
+//tip always use reduce method for single value
+
+
+let countChar = (word,char)=>{
+    word = word.toLowerCase();
+    char = char.toLowerCase();
+    totalCount = word.split("").reduce((accum,crnt)=>{
+        if(crnt === char){
+            accum++;
+        }
+        return accum
+
+    },0)
+    return totalCount;
+}
+
+
+console.log(countChar("ShyamsunderHait", "s" ));
+
+
 
 
