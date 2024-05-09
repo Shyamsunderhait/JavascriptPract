@@ -186,7 +186,7 @@ let countChar = (word,char)=>{
     char = char.toLowerCase();
     totalCount = word.split("").reduce((accum,crnt)=>{
         if(crnt === char){
-            accum++;
+            accum++; 
         }
         return accum
 
@@ -200,3 +200,7 @@ console.log(countChar("ShyamsunderHait", "s" ));
 
 
 
+  
+
+
+ 
