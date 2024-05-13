@@ -199,8 +199,33 @@ console.log(countChar("ShyamsunderHait", "s" ));
 
 
 
+//second largest number in an array
 
-  
+
+let ara = [1,4,5,4,4,8,8,4,4,7,9,9]
+
+let nle = ara.length;
+
+let high = -Infinity;
+let secHigh = -Infinity;
+
+for (let i = 0; i < nle; i++) {
+    high = Math.max(high,ara[i]);
+}
+
+for (let i = 0; i < nle; i++) {
+    if(ara[i]< high){
+        secHigh = Math.max(secHigh,ara[i])
+    }
+    
+}
+console.log(high,secHigh);
 
 
- 
+// join two arrays without concate or forllog (APPLY)
+
+let yaa = ['f','y','r','w'];
+let too = [1,4,3,5];
+
+yaa.push.apply(yaa,too)
+console.log(yaa);
